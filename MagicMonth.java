@@ -1,5 +1,3 @@
-package com.jesse.FinancialProjection;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -66,7 +64,7 @@ public class MagicMonth {
 
 			}
 
-		Collections.sort(PredictionList, new byCurrentDate());
+		Collections.sort(PredictionList);
 	
 		int iCurMonth = 0;
 		int iLastMonth = 0;

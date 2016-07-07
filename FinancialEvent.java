@@ -1,8 +1,6 @@
-package com.jesse.FinancialProjection;
-
 import java.util.Calendar;
 
-public class FinancialEvent {
+public class FinancialEvent implements Comparable<FinancialEvent> {
 	String strName;
 	double dAmount;
 	Calendar calStartDate;
@@ -87,6 +85,20 @@ public class FinancialEvent {
 	
 	String getLabel(){
 		return strLabel;
+	}
+
+	public int compareTo(FinancialEvent a) {
+		 if (this.getCurrentOccurance().getTime().before(a.getCurrentOccurance().getTime())){
+			 return -1;
+		 }
+		 if (this.getCurrentOccurance().getTime().equals(a.getCurrentOccurance().getTime())){
+			 return 0;
+		 }
+		 if (this.getCurrentOccurance().getTime().after(a.getCurrentOccurance().getTime())){
+			 return 1;
+		 }
+		 return 0;
+
 	}
 	
 }

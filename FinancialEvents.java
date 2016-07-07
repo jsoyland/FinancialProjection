@@ -1,5 +1,3 @@
-package com.jesse.FinancialProjection;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -121,7 +119,7 @@ public class FinancialEvents {
 	@SuppressWarnings("unchecked")
 	public int print(){
 	
-		Collections.sort(m_FinancialEvent, new byCurrentDate());
+		Collections.sort(m_FinancialEvent);
 	
 		for (int i = 0; i < m_iCount; i++){
 			m_FinancialEvent.get(i).print();
@@ -163,7 +161,7 @@ public class FinancialEvents {
 			}
 		}
 
-		Collections.sort(m_PredictionList, new byCurrentDate());
+		Collections.sort(m_PredictionList);
 	
 		for (int i = 0; i < m_PredictionList.size(); i++){
 			m_PredictionList.get(i).print();

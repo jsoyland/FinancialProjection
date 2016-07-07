@@ -1,5 +1,3 @@
-package com.jesse.FinancialProjection;
-
 import java.util.Calendar;
 
 public class FinancialProjection {
